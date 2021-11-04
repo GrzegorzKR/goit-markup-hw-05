@@ -28,7 +28,6 @@ img {
 figure {
   margin: 0;
 }
-
 .list {
   list-style: none;
 }
@@ -36,6 +35,7 @@ figure {
 .link {
   text-decoration: none;
 }
+
 .container {
   width: 1200px;
   padding: 0 15px;
@@ -50,10 +50,12 @@ figure {
   padding: 94px 0;
 }
 
+
 /*===========COMPONENTS===========*/
 button {
   cursor: pointer;
 }
+
 
 /*===========MENU===========*/
 header {
@@ -63,6 +65,7 @@ header {
 .menu {
   background: #ffffff;
 }
+
 .menu-wrapper {
   display: flex;
   align-items: center;
@@ -72,28 +75,30 @@ header {
   padding-top: 24px;
   padding-bottom: 25px;
   margin-right: 93px;
-
   font-family: var(--secondary-font);
   font-weight: bold;
   font-size: 26px;
   line-height: 1.192;
   letter-spacing: 0.03em;
-
   color: var(--main-color);
 }
 
 .logo-header > span {
   color: var(--font-color);
 }
+
+
 /**Navigation*/
 .navigation {
   display: flex;
   width: 254px;
   margin-right: 345px;
 }
+
 .navigation-list {
   display: flex;
 }
+
 .navigation-list-item,
 .contact-list {
   font-family: var(--main-font);
@@ -103,19 +108,30 @@ header {
   letter-spacing: 0.02rem;
   fill: #757575;
 }
+
 .navigation-list-item:not(:last-child) {
   margin-right: 46px;
 }
 
 .navigation-link {
   color: var(--font-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.contact-phone {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+}
+
 .contact-phone-icon {
   margin-right: 10px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .contact-phone-icon:hover {
   fill: var(--main-color);
 }
+
 .navigation-link:hover,
 .navigation-link:focus,
 .navigation-link:active,
@@ -126,23 +142,27 @@ header {
   color: var(--main-color);
   fill: var(--main-color);
 }
+
 .contact-mail {
   margin-right: 30px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .contact-mail-icon {
   margin-right: 10px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contact-phone {
-  display: flex;
-}
+
 .contact-list {
   display: flex;
 }
+
 .contact-list a {
   font-style: normal;
   color: #757575;
 }
 /*=========== END MENU===========*/
+
 
 /* =========== MAIN PAGE HEADER===========*/
 .hero-section {
@@ -329,6 +349,8 @@ h2 {
   border-radius: 50%;
   align-items: center;
   justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-list-item {
   margin-right: 10px;
@@ -360,6 +382,7 @@ h2 {
   border-radius: 4px;
   align-items: center;
   justify-content: center;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-list-link:hover,
 .clients-list-link:focus {
@@ -388,13 +411,17 @@ footer .container {
   font-size: 26px;
   line-height: 1.192;
   letter-spacing: 0.03em;
-
   color: var(--main-color);
 }
 
 .logo-footer > span {
   color: white;
 }
+.contact-footer-mail,
+.contact-footer-mail {
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .contact-footer-mail:hover,
 .contact-footer-mail:focus,
 .contact-footer-phone:hover,
@@ -441,6 +468,8 @@ footer .container {
   align-items: center;
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-list-footer-link:hover {
   background-color: var(--main-color);
@@ -475,10 +504,14 @@ footer .container {
   line-height: 1.625;
   text-align: center;
   letter-spacing: 0.03em;
+  background: #f5f4fa;
 }
 
 .filters-buttons button {
-  background: #f5f4fa;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ 
 }
 .filters-buttons button:hover,
 .filters-buttons button:focus {
@@ -523,6 +556,7 @@ footer .container {
   background: #ffffff;
   box-shadow: inset 0px 0px 0px 1px #eee;
   margin-bottom: 30px;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects-list-item:hover,
@@ -530,7 +564,7 @@ footer .container {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
   cursor: pointer;
-}
+  }
 
 .projects-list-item:nth-last-child(-n + 3) {
   margin-bottom: 0;
