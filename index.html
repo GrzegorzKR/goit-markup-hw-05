@@ -71,7 +71,13 @@
             <h1 class="header-tittle">
               EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU
             </h1>
-            <button class="header-button" type="button">Zamów usługe</button>
+            <button
+              class="header-button modal-btn"
+              type="button"
+              data-modal-open
+            >
+              Zamów usługe
+            </button>
           </div>
         </div>
       </section>
@@ -482,5 +488,14 @@
         </div>
       </div>
     </footer>
+
+    <!--Modal window-->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="close-btn" data-modal-close>X</button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
