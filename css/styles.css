@@ -111,8 +111,19 @@ header {
 }
 
 .navigation-link {
+  position: relative;
   color: var(--font-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.navigation-link::after {
+  position: absolute;
+  top: 45px;
+  content: "";
+  display: block;
+  width: 58px;
+  height: 4px;
+  background: #2196f3;
+  border-radius: 2px;
 }
 
 .contact-phone {
@@ -615,8 +626,8 @@ footer .container {
   transform: translateY(100%);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.projects-list-item-img:hover .overlay {
-  transform: translateX(0);
+.projects-list-item:hover .overlay {
+  transform: translateY(0);
 }
 
 /*=========== END PORTFOLIO ===========*/
@@ -624,6 +635,9 @@ footer .container {
 /*=========== MODAL WINDOW ===========*/
 .backdrop {
   position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 0;
   left: 0;
   width: 100%;
@@ -635,15 +649,30 @@ footer .container {
   position: absolute;
   width: 528px;
   height: 581px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   z-index: 1;
-  transition: 2000ms cubic-bezier(0.4, 0, 0.2, 1);
+  animation-name: modal-animation;
+  animation-duration: 2s;
+}
+@keyframes modal-animation {
+  0% {
+    opacity: 0;
+    scale: 0;
+  }
+
+  50% {
+    opacity: 0.3;
+    scale: 0.3;
+  }
+
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
 }
 
 .close-btn {
