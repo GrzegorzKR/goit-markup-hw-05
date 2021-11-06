@@ -115,7 +115,12 @@ header {
   color: var(--font-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.navigation-link::after {
+
+.current-page {
+  color: var(--main-color);
+}
+
+.current-page::after {
   position: absolute;
   top: 45px;
   content: "";
