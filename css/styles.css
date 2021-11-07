@@ -111,13 +111,13 @@ header {
 }
 
 .navigation-link {
-  position: relative;
   color: var(--font-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .current-page {
   color: var(--main-color);
+  position: relative;
 }
 
 .current-page::after {
